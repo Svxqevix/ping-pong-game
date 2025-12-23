@@ -1,75 +1,48 @@
-# React + TypeScript + Vite
+# React Ping Pong Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, browser based Ping Pong game built with React and TypeScript.
+The game features two paddles (left: W/S keys, right: Arrow Up/Down) and a moving ball that bounces off paddles and walls. If the ball passes either side, the game ends.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real‑time paddle movement using keyboard controls
 
-## React Compiler
+- Ball movement with basic collision detection
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Start, pause, and restart controls
 
-Note: This will impact Vite dev & build performances.
+- Clean React component structure
 
-## Expanding the ESLint configuration
+- Fully typed with TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Lightweight and fast thanks to Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Currently, two official plugins are available:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Controls
+|Player | Keys |
+|:------|:-----|
+|Left Paddle | W (Up), S (Down)|
+|Right Paddle | Arrow Up, Arrow Down|
+
+## Getting Started
+
+#### Install Dependencies:
+```
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Run the Development Server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm run dev
+```
+
+#### Compile the Application:
+
+```
+npm run build
+```
+
+##### Crafted with React, TypeScript, and a stubborn refusal to lose at Pong.
